@@ -320,6 +320,19 @@ string
 The validation strategy can be &lsquo;client&rsquo; (local dry-run), &lsquo;server&rsquo; (APIServer dry-run) or &lsquo;none&rsquo;.</p>
 </td>
 </tr>
+<tr>
+<td>
+<code>force</code><br>
+<em>
+bool
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>Force instructs the controller to recreate resources in the situation
+when dealing with immutable field changes.</p>
+</td>
+</tr>
 </table>
 </td>
 </tr>
@@ -761,6 +774,19 @@ string
 <em>(Optional)</em>
 <p>Validate the Kubernetes objects before applying them on the cluster.
 The validation strategy can be &lsquo;client&rsquo; (local dry-run), &lsquo;server&rsquo; (APIServer dry-run) or &lsquo;none&rsquo;.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>force</code><br>
+<em>
+bool
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>Force instructs the controller to recreate resources in the situation
+when dealing with immutable field changes.</p>
 </td>
 </tr>
 </tbody>

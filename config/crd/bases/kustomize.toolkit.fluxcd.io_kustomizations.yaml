@@ -88,6 +88,11 @@ spec:
                   - name
                   type: object
                 type: array
+              force:
+                default: false
+                description: Force instructs the controller to recreate resources
+                  in the situation when dealing with immutable field changes.
+                type: boolean
               healthChecks:
                 description: A list of resources to be included in the health assessment.
                 items:

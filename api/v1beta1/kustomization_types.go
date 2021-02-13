@@ -17,9 +17,10 @@ limitations under the License.
 package v1beta1
 
 import (
+	"time"
+
 	apiextensionsv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	apimeta "k8s.io/apimachinery/pkg/api/meta"
-	"time"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
@@ -127,6 +128,12 @@ type KustomizationSpec struct {
 	// +kubebuilder:validation:Enum=none;client;server
 	// +optional
 	Validation string `json:"validation,omitempty"`
+
+	// Force instructs the controller to recreate resources in the situation
+	// when dealing with immutable field changes.
+	// +kubebuilder:default:=false
+	// +optional
+	Force bool `json:"force,omitempty"`
 }
 
 // Decryption defines how decryption is handled for Kubernetes manifests.
